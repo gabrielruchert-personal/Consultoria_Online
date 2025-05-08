@@ -1,0 +1,2351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultoria Online - Gabriel Ruchert | Personal Trainer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #000000;
+      --primary-light: #000000;
+      --secondary: #000;
+      --light: #f9f9f9;
+      --white: #ffffff;
+      --gray: #eeeeee;
+      --dark-gray: #bbbbbb;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #000000, #ff6600);
+      color: var(--white);
+      text-align: center;
+      padding: 100px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0 0 15px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+    
+    .personal-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--white);
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    section {
+      background: var(--white);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin: -60px auto 60px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    
+    .section-content {
+      padding: 60px;
+    }
+    
+    h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: var(--primary-light);
+    }
+    
+    h3 {
+      color: var(--primary);
+      margin: 30px 0 20px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin-bottom: 40px;
+    }
+    
+    ul li {
+      padding: 12px 0;
+      position: relative;
+      padding-left: 35px;
+      font-size: 1.1rem;
+    }
+    
+    ul li:before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+    }
+/* ============ SEÇÃO NOSSOS NÚMEROS ============ */
+.numeros-section {
+  background: linear-gradient(135deg, #000000, #ff6600);
+  color: white;
+  border-radius: 15px;
+  margin: 60px auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 60px 20px;
+}
+
+.numeros-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.numeros-img {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.numeros-img img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.numeros-grid {
+  flex: 2 1 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.numeros-section h2 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.numeros-section h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: white;
+  margin-top: 10px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0 auto 50px auto;
+  opacity: 0.9;
+  max-width: 700px;
+}
+
+.numero-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.numero-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.numero-value {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+  line-height: 1;
+}
+
+.numero-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.numero-desc {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  color: white;
+}
+
+.cta-numeros {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.highlight-scroll {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  0% { box-shadow: 0 0 0 0 rgba(255,102,0,0.7); }
+  50% { box-shadow: 0 0 0 10px rgba(255,102,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,102,0,0); }
+}
+
+/* ============ RESPONSIVIDADE ============ */
+@media (max-width: 768px) {
+  .numeros-content {
+    flex-direction: column;
+  }
+
+  .numeros-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .numero-card {
+    padding: 30px 20px;
+  }
+
+  .numero-value {
+    font-size: 2.8rem;
+  }
+}
+/* ============ SEÇÃO DE PLANOS ============ */
+.planos-tabs {
+  margin-top: 30px;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tab-btn {
+  padding: 12px 25px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.tab-btn.active {
+  background: #ff6600;
+  color: white;
+}
+
+.tab-btn:hover:not(.active) {
+  background: #e0e0e0;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.plano-header .economia {
+  color: #ff6600;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.planos-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.planos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.plano-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 30px;
+  transition: all 0.3s ease;
+  border-top: 5px solid #ff6600;
+}
+
+.plano-card.destaque {
+  transform: scale(1.02);
+  border-top: 5px solid #000;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.plano-card.destaque::before {
+  content: "MAIS POPULAR";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #ff6600;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.plano-header {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.plano-header h3 {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.plano-preco {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6600;
+  margin: 10px 0;
+}
+
+.plano-preco span {
+  font-size: 1rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.plano-beneficios {
+  margin: 25px 0;
+  list-style: none;
+}
+
+.plano-beneficios li {
+  padding: 12px 0;
+  position: relative;
+  padding-left: 30px;
+  font-size: 1.05rem;
+}
+
+.plano-beneficios li span {
+  color: #ff6600;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.destaque-beneficio {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.btn-plano {
+  display: block;
+  background: #ff6600;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-plano:hover {
+  background: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.pagamento-info {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.cta-duvidas {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.btn-duvidas {
+  display: inline-block;
+  background: #000;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #000;
+}
+
+.btn-duvidas:hover {
+  background: transparent;
+  color: #000;
+}
+
+/* ============ RESPONSIVIDADE ============ */
+@media (max-width: 992px) {
+  .planos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .plano-card.destaque {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .planos-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  .plano-card {
+    padding: 25px;
+  }
+  
+  .plano-header h3 {
+    font-size: 1.6rem;
+  }
+  
+  .plano-preco {
+    font-size: 2.2rem;
+  }
+  
+  .tab-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin: 0 3px 5px;
+  }
+}
+/* ============ SEÇÃO DE BENEFÍCIOS ============ */
+.beneficios-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.beneficios-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #000;
+  position: relative;
+}
+
+.beneficios-section h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff6600;
+  margin: 15px auto 0;
+}
+
+/* Grid de benefícios - versão 1 */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.beneficio-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #ff6600;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.beneficio-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff6600;
+}
+
+.beneficio-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.beneficio-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.destaque-cupom {
+  background: #ff6600;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Grid de benefícios - versão 2 */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.benefit-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.benefit-card h3 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+/* Seção benefícios com imagem */
+.benefits-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.benefits-image {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  align-self: stretch;
+}
+
+.foto-transformacao {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.foto-transformacao:hover {
+  transform: scale(1.02);
+}
+
+.benefits-text {
+  flex: 2;
+  min-width: 300px;
+}
+
+/* Seção destaque com imagem */
+.destaque-com-imagem {
+  background: linear-gradient(135deg, #000000, #ff6600);
+  color: white;
+  padding: 60px 20px;
+  margin: 60px 0;
+}
+
+.destaque-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.destaque-texto {
+  flex: 1;
+}
+
+.destaque-texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  color: white;
+}
+
+.destaque-texto h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: white;
+}
+
+.destaque-texto p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.destaque-lista {
+  list-style: none;
+  margin: 30px 0;
+}
+
+.destaque-lista li {
+  padding: 10px 0;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 35px;
+}
+
+.destaque-lista li span {
+  color: #ff6600;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+}
+
+.destaque-imagem {
+  flex: 1;
+  position: relative;
+}
+
+.foto-metodo {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 5px solid white;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.foto-metodo:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.btn-destaque {
+  display: inline-block;
+  padding: 18px 40px;
+  background: white;
+  color: #ff6600;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.btn-destaque:hover {
+  background: #000;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* ============ RESPONSIVIDADE ============ */
+@media (max-width: 992px) {
+  .benefits-content {
+    flex-direction: column;
+  }
+  
+  .benefits-image {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  
+  .foto-transformacao {
+    height: 100%;
+  }
+  
+  .destaque-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .destaque-texto, .destaque-imagem {
+    width: 100%;
+  }
+  
+  .destaque-texto h2 {
+    font-size: 2rem;
+  }
+  
+  .foto-metodo {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .beneficios-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .beneficio-card {
+    padding: 30px 20px;
+  }
+  
+  .benefits-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .destaque-com-imagem {
+    padding: 40px 20px;
+  }
+  
+  .destaque-texto h2 {
+    font-size: 1.8rem;
+  }
+  
+  .btn-destaque {
+    padding: 15px 30px;
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ============ SEÇÃO DESTAQUE ============ */
+.destaque {
+  background: linear-gradient(135deg, #000000, #ff6600);
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+  margin: 60px 0;
+  border-radius: 15px;
+}
+
+.destaque h2 {
+  color: var(--white);
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.destaque h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--white);
+  margin-top: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.destaque p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ============ CTA SECTION ============ */
+.cta {
+  text-align: center;
+    margin: 30px 0; /* Reduzi a margem para mobile */
+    animation: pulse 2s infinite;
+    padding: 0 15px;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 20px 50px;
+  background: #000000;
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: 
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cta a:hover {
+  background: #ff6600;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.cta-button {
+    background: var(--primary);
+    color: var(--white);
+    padding: 16px 30px; 
+    font-size: 1rem; 
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(255,94,0,0.3);
+    border: none;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    -webkit-tap-highlight-color: transparent; 
+    min-width: 200px; 
+}
+
+.cta-button:hover, .cta-button:active {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,94,0,0.4);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ============ SEÇÃO "QUEM É GABRIEL" ============ */
+.about-section {
+  margin: 40px auto; 
+  background: var(--white); 
+  border-radius: 15px; 
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1); 
+  overflow: hidden; 
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center; 
+}
+
+.about-text {
+  flex: 1; 
+  min-width: 300px; 
+  padding: 40px; 
+}
+
+.specialty-item {
+  font-size: 20px; 
+  line-height: 1.8; 
+}
+
+.about-image {
+  flex: 1; 
+  min-width: 300px; 
+  position: relative; 
+}
+
+.about-image img {
+  width: 100%; 
+  height: 100%; 
+  min-height: 400px; 
+  object-fit: cover; 
+}
+
+.btn-comece-agora {
+  display: inline-block;
+  padding: 18px 40px; 
+  background: linear-gradient(45deg, #ff6600, #ff8c00); 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 50px; 
+  font-weight: 700; 
+  margin: 30px auto; 
+  transition: all 0.3s ease; 
+  text-align: center; 
+  font-size: 1.3rem;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4); 
+  border: none; 
+  cursor: pointer; 
+  width: fit-content;
+  animation: pulse 2s infinite; 
+}
+.btn-comece-agora:hover {
+  transform: translateY(-3px) scale(1.05); 
+  box-shadow: 0 10px 25px rgba(255, 102, 0, 0.5);
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); } 
+  100% { transform: scale(1); } 
+}
+html {
+  scroll-behavior: smooth; 
+}
+
+  /* ============ SEÇÃO FEEDBACKS DOS ALUNOS ============ */
+  .depoimentos-section {
+    margin: 60px auto;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    max-width: 1200px;
+  }
+
+  .depoimentos-container {
+    padding: 60px;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .depoimentos-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .depoimentos-title h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .depoimentos-title h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+  }
+
+  .depoimentos-title p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto; 
+    text-align: center; 
+  }
+
+  /* Estilos do Carrossel */
+  .carrossel-container {
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0;
+    border-radius: 10px;
+  }
+
+  .carrossel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .depoimento-card {
+    min-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .depoimento-img {
+    width: 95%; /* Reduzido para 90% no desktop */
+    max-width: 600px; /* Largura máxima reduzida */
+    height: auto;
+    margin: 0 auto; /* Centraliza a imagem */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .depoimento-img:hover {
+    transform: scale(1.02);
+  }
+
+  .carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carrossel-btn:hover {
+    background: rgba(0,0,0,0.8);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .carrossel-prev {
+    left: 20px;
+  }
+
+  .carrossel-next {
+    right: 20px;
+  }
+
+  .carrossel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .carrossel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .carrossel-dot.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+  }
+
+  /* ============ RESPONSIVIDADE ============ */
+  @media (max-width: 767px) {
+    .carrossel-container {
+      margin: 10px 0; /* Reduz margens para ganhar espaço */
+      padding: 10px 0; /* Adiciona padding interno */
+      width: 120%; /* Aumenta a largura do container */
+      margin-left: -10%;
+      margin-right: auto;
+    }
+    
+    .depoimento-card {
+      padding: 0; /* Remove padding lateral para maximizar espaço */
+    }
+    
+    .depoimento-img {
+      max-height: 90vh; /* Altura máxima bem generosa */
+      object-fit: contain; /* Garante que a imagem inteira será visível */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .depoimentos-title h2 {
+      font-size: 1.8rem;
+    }
+    
+    .depoimentos-title p {
+      font-size: 1rem;
+    }
+    
+    .carrossel-btn {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+  }
+
+/* ============ RESPONSIVIDADE DEMAIS TELAS ============ */
+@media (max-width: 1200px) {
+  .result-images img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-content {
+    padding: 50px 40px;
+  }
+  
+  .plano-card {
+    min-width: 280px;
+  }
+  
+  .result-images img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 80px 20px 60px;
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+  }
+  
+  .personal-photo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .section-content {
+    padding: 40px 30px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .result-images img {
+    height: 250px;
+  }
+  
+  .plano-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .cta a {
+    font-size: 1.1rem;
+    padding: 18px 40px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .about-text, .about-image {
+    min-width: 100%;
+  }
+  
+  .about-image img {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 60px 20px 40px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .personal-photo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .section-content {
+    padding: 30px 20px;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  ul li {
+    font-size: 1rem;
+    padding-left: 30px;
+  }
+  
+  .destaque {
+    padding: 50px 20px;
+  }
+  
+  .destaque h2 {
+    font-size: 1.8rem;
+  }
+  
+  .destaque p {
+    font-size: 1rem;
+  }
+  
+  footer {
+    padding: 40px 20px;
+  }
+  
+  footer img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .social-links a {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .result-images img {
+    height: 220px;
+  }
+  
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    padding: 0;
+  }
+  
+  .about-text {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    padding: 14px 25px;
+    font-size: 0.9rem;
+    width: 90%;
+    max-width: 280px;
+  }
+  
+  .cta {
+    margin: 20px 0;
+  }
+}
+
+/* ============ FOOTER SECTION ============ */
+footer {
+  background: var(--secondary);
+  color: var(--dark-gray);
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 80px;
+}
+
+footer img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 4px solid #ff6600;
+  object-fit: cover;
+}
+
+footer h3 {
+  color: var(--white);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: var(--white);
+  font-size: 1.8rem;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 50%;
+  transition: 
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #000000;
+  transform: translateY(-5px);
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="logo_header.png" alt="Gabriel Ruchert - Personal Trainer" class="personal-photo">
+      <h1>Transforme Seu Corpo com Acompanhamento Especializado</h1>
+      <p>Consultoria Online Personalizada com Resultados Comprovados</p>
+      <p></p>
+
+      <div class="cta-pulse">
+        <a href="#planos" class="cta-button">QUERO ME TRANSFORMAR</a>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <section>
+      <div class="section-content">
+        <div class="benefits-section">
+          <h2>O que você vai conquistar:</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon"></div> 
+              <img src="treino100.png" alt="Ícone de benefício" width="100">
+              <h3>Treino 100% personalizado</h3>
+              <p>Entregue pelo aplicativo exclusivo ou em planilha.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon"></div>
+              <img src="app completo.png" alt="Ícone de benefício" width="100">
+              <h3>Aplicativo completo</h3>
+              <p>Com vídeos demonstrativos.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon"></div>
+              <img src="flexibilidade.png" alt="Ícone de benefício" width="100">
+              <h3>Flexibilidade de duração</h3>
+              <p>Planos de 1, 3, 6 ou 12 meses, adaptáveis ao seu momento.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon"></div>
+              <img src="entrega rapida.png" alt="Ícone de benefício" width="100">
+              <h3>Entrega rápida </h3>
+              <p> Plano pronto em até 5 dias úteis + suporte contínuo via WhatsApp.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon"></div>
+              <img src="acompanhamento online.png" alt="Ícone de benefício" width="100">
+              <h3>Acompanhamento online </h3>
+              <p>Treine de onde estiver, na academia ou no conforto de sua casa.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon"></div>
+              <img src="avaliacao fisica.png" alt="Ícone de benefício" width="100">
+              <h3>Avaliação física e postural completa</h3>
+              <p>Controle de medidas, análise de postura, identificação de desequilíbrios e acompanhamento detalhado da sua evolução.</p>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <h2>Como funciona nosso processo:</h2>
+        <div class="process-flow">
+          <div class="process-step">
+            <img src="escolha.png" alt="Ícone de contato" width="45">
+            <h3>Escolha seu plano.</h3>
+            <p></p>
+          </div>
+          
+          <div class="step-arrow">→</div>
+          
+          <div class="process-step">
+            <img src="preencha anamese.png" alt="Ícone de avaliação" width="50">
+            <h3>Preencha a anamnese.</h3>
+            <p></p>
+          </div>
+          
+          <div class="step-arrow">→</div>
+          
+          <div class="process-step">
+            <img src="receba sua avaliacao.png" alt="Ícone de planejamento" width="50">
+            <h3>Receba sua avaliação.</h3>
+            <p></p>
+          </div>
+          
+          <div class="step-arrow">→</div>
+          
+          <div class="process-step">
+            <img src="entrega treino.png" alt="Ícone de acompanhamento" width="50">
+            <h3>Entrega dos treinos.</h3>
+            <p></p>
+          </div>
+        </div>
+
+        <style>
+          .process-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 20px 0;
+          }
+          
+          .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 0 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          }
+          
+          .step-number {
+            width: 30px;
+            height: 30px;
+            background: #2a9d8f;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+          }
+          
+          .step-arrow {
+            font-size: 30px;
+            font-weight: bold;
+            color: #000000;
+            padding: 0 10px;
+          }
+          
+          @media (max-width: 768px) {
+            .process-flow {
+              flex-direction: column;
+            }
+            .step-arrow {
+              transform: rotate(90deg);
+              padding: 10px 0;
+            }
+          }
+        </style>
+       <!---------------------------------------------------------------------------------------------------------------------------------------------------------->   
+       <div class="before-after">
+        <h2>Resultados dos meus alunos</h2>
+        <div class="results-vertical">
+          <div class="result-item">
+            <img src="resultado_1.png" alt="Antes e Depois - Resultado 1" loading="lazy">
+          </div>
+          
+          <div class="result-item">
+            <img src="resultado_2.png" alt="Antes e Depois - Resultado 2" loading="lazy">
+          </div>
+          
+          <div class="result-item">
+            <img src="resultado_3.png" alt="Antes e Depois - Resultado 3" loading="lazy">
+          </div>
+      
+          <div class="result-item">
+            <img src="resultado_4.png" alt="Antes e Depois - Resultado 4" loading="lazy">
+          </div>
+          <div class="result-item">
+            <img src="resultado_5.png" alt="Antes e Depois - Resultado 5" loading="lazy">
+          </div>
+        </div>
+      </div>
+      
+      <style>
+        .before-after {
+          padding: 40px 20px;
+          background: linear-gradient(to bottom, #ffffff, #ffffff);
+        }
+        
+        .before-after h2 {
+          text-align: center;
+          color: #ff6600;
+          font-size: 2.2rem;
+          margin-bottom: 30px;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        .results-vertical {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+          margin: 0 auto;
+          max-width: 1200px;
+        }
+        
+        .result-item {
+          width: 100%;
+          max-width: 600px;
+          transition: all 0.3s ease;
+          border-radius: 12px;
+          overflow: hidden;
+        }
+        
+        .result-item:hover {
+          transform: translateY(-5px);
+        }
+        
+        .result-item img {
+          width: 100%;
+          height: auto;
+          border-radius: 12px;
+          box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+          border: 2px solid #fff;
+          transition: all 0.3s ease;
+        }
+        
+        .result-item:hover img {
+          box-shadow: 0 10px 25px rgba(236, 96, 2, 0.959);
+        }
+        
+        @media (max-width: 768px) {
+          .results-vertical {
+            gap: 30px;
+          }
+          
+          .result-item {
+            max-width: 100%;
+          }
+        }
+      </style>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------->       
+          <div class="numeros-section">
+            <h2>Nossos números e História </h2> 
+            <p class="section-subtitle">Transformando vidas através do treinamento personalizado.</p>
+          
+            <div class="numeros-content">
+              <div class="numeros-img">
+                <img src="nossos_numeros.jpg" alt="Imagem ilustrativa">
+              </div>
+          
+              <div class="numeros-grid">
+                <div class="numero-card">
+                  <div class="numero-value">+5</div>
+                  <div class="numero-title">Países</div>
+                  <div class="numero-desc">Atendendo alunos ao redor do mundo.</div>
+                </div>
+                <div class="numero-card">
+                  <div class="numero-value">+4</div>
+                  <div class="numero-title">Anos de experiência</div>
+                  <div class="numero-desc">Transformando corpos e vidas.</div>
+                </div>
+                <div class="numero-card">
+                  <div class="numero-value">+100</div>
+                  <div class="numero-title">Alunos</div>
+                  <div class="numero-desc">Já transformaram seus corpos com meu método.</div>
+                </div>
+                <div class="numero-card">
+                  <div class="numero-value">100%</div>
+                  <div class="numero-title">Online</div>
+                  <div class="numero-desc">Atendimento online com resultados comprovados.</div>
+                </div>
+              </div>
+              <div class="cta-numeros">
+                <!-- Botão ou chamada final -->
+              </div>
+            </div>
+          </div>
+            <div class="beneficios-section">
+              <h2 > Benefícios exclusivos</h2> 
+              
+              <div class="beneficios-grid">
+                <!-- Bloco 1 -->
+                <div class="beneficio-card">
+                  <img src="off em suple.png" alt="Ícone de benefício" width="50" >
+                  <h3>20% OFF em suplementos</h3>
+                  <p>Desconto exclusivo na <strong>Nutriblue</strong> usando o cupom: <span class="destaque-cupom">GABRIELPERSONAL</span></p>
+                </div>
+                
+                <!-- Bloco 2 -->
+                <div class="beneficio-card">
+                  <img src="parceiros.png" alt="Ícone de benefício" width="50">
+                  <h3>Parcerias profissionais</h3>
+                  <p>Descontos em <strong>nutricionista, psicóloga, massoterapeuta</strong> e <strong>salão de beleza.</strong></p>
+                </div>
+                
+                <!-- Bloco 3 -->
+                <div class="beneficio-card">
+                  <img src="brindes.png" alt="Ícone de benefício" width="50">
+                  <h3>Brindes exclusivos de acordo com os planos.</h3>
+                  <p><strong>Coqueteleira ou camiseta.</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="destaque-com-imagem">
+              <div class="destaque-container">
+                <div class="destaque-texto">
+                  <h2>Por que escolher meu método?</h2>
+                  <p>Com mais de 4 anos de experiência e centenas de alunos transformados, desenvolvi um método que se adapta à sua rotina, objetivos e limitações. Não importa se você treina em casa ou na academia, vou criar o plano ideal para você!</p>
+                  
+                  <ul class="destaque-lista">
+                    <li><span>✔</span> Treino inteligente, pensado para você</li>
+                    <li><span>✔</span> Se adapta à sua rotina – sem desculpas, sem complicação</li>
+                    <li><span>✔</span> Funciona tanto em casa quanto na academia</li>
+                    <li><span>✔</span> Suporte 24h via WhatsApp – você nunca treina sozinho</li>
+                  </ul>
+                  
+                  <div class="cta">
+                    <a href="#planos"  class="btn-destaque">Quero me transformar</a>
+                  </div>
+                </div>
+                
+                <div class="destaque-imagem">
+                  <img src="foto_metodos.jpg" alt="Gabriel Ruchert - Método Comprovado" class="foto-metodo">
+                </div>
+              </div>
+            </div>
+        <div class="container">
+
+            <div class="about-content">
+              <div class="about-text">
+                <h2 style="font-size: 35px;">Quem é Gabriel Ruchert</h2>
+
+                <div class="specialties-section">
+                  <div class="specialties-grid">
+                    <div class="specialty-item"><span>✔</span> +4 anos como Personal Trainer</div>
+                    <div class="specialty-item"><span>✔</span> Pós-graduando em Musculação Avançada pela Faculdade UNIGUAÇU.</div>
+                    <div class="specialty-item"><span>✔</span> Especialista em treinamento feminino com ênfase em glúteos.</div>
+                  </div>
+                </div>
+
+
+                <h3 style="font-size: 30px;"></h3style>Vamos juntos nessa jornada?</h3>
+                <p style="font-size: 25px;"> vou te ajudar a chegar lá! 💪</p>
+
+                <!-- BOTÃO COM ID ADICIONADO -->
+                <a href="#planos" class="btn-comece-agora" id="btn-comece-agora">Acesse os planos disponíveis</a>
+              </div>
+              <div class="about-image">
+                <img src="foto_sobremim.jpg" alt="Gabriel Ruchert treinando">
+              </div>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------------------------------------------------------------------------------------------->     
+<!-- Seção de Depoimentos Atualizada -->
+<div class="depoimentos-container">
+  <div class="depoimentos-title">
+    <h2>O que meus alunos dizem:</h2>
+    <p>Resultados reais de pessoas reais que confiaram no meu método</p>
+  </div>
+  
+  <div class="carrossel-container">
+    <div class="carrossel-track">
+      <!-- Depoimento 1 -->
+      <div class="depoimento-card">
+        <img src="depoimento.png" alt="Depoimento de aluno" class="depoimento-img">
+      </div>
+      
+      <!-- Depoimento 2 -->
+      <div class="depoimento-card">
+        <img src="depoimento1.png" alt="Depoimento de aluno" class="depoimento-img">
+      </div>
+      
+      <!-- Depoimento 3 -->
+      <div class="depoimento-card">
+        <img src="depoimento2.png" alt="Depoimento de aluno" class="depoimento-img">
+      </div>
+      
+      <!-- Depoimento 4 -->
+      <div class="depoimento-card">
+        <img src="depoimento4.png" alt="Depoimento de aluno" class="depoimento-img">
+      </div>
+      
+      <!-- Depoimento 5 -->
+      <div class="depoimento-card">
+        <img src="depoimento5.png" alt="Depoimento de aluno" class="depoimento-img">
+      </div>
+    </div>
+    
+    <!-- Botões de navegação -->
+    <button class="carrossel-btn carrossel-prev">❮</button>
+    <button class="carrossel-btn carrossel-next">❯</button>
+  </div>
+  
+  <!-- Indicadores de slide -->
+  <div class="carrossel-dots"></div>
+</div>
+
+<style>
+  .depoimentos-container {
+    max-width: 800px; /* Ajuste conforme necessário */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .depoimentos-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espaço entre as imagens */
+  }
+  
+  .depoimento-single {
+    width: 100%;
+    max-width: 500px; /* Controla a largura máxima das imagens */
+  }
+  
+  .depoimento-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block; /* Remove espaços indesejados abaixo da imagem */
+  }
+  
+  /* Remove elementos do carrossel que não serão mais usados */
+  .carrossel-nav, .carrossel-dots {
+    display: none;
+  }
+</style>
+  <div class="section-content">
+    <h2 id="planos">Planos de Atendimento</h2>
+    
+    <div class="planos-tabs">
+      <!-- Abas de navegação -->
+      <div class="tabs-header">
+        <button class="tab-btn " data-tab="mensal">Mensal</button>
+        <button class="tab-btn" data-tab="trimestral">Trimestral</button>
+        <button class="tab-btn" data-tab="semestral">Semestral</button>
+        <button class="tab-btn active" data-tab="anual">Anual</button>
+      </div>
+      
+      <!-- Conteúdo das abas -->
+      <div class="tabs-content">
+        <!-- Plano Mensal -->
+        <div class="tab-pane " id="mensal">
+          <div class="planos-grid">
+            <!-- Individual Mensal -->
+            <div class="plano-card">
+              <div class="plano-header">
+                <h3>Individual</h3>
+                <div class="plano-preco">R$ 180,00<span>/mês</span></div>
+                <span> no pix ou R$190,00 no crédito em até 2x</span>
+                <p class="economia">Desconto de 5,26% no Pix.</p>
+              </div>
+              
+              <ul class="plano-beneficios">
+                <li><span>✓</span> Treino 100% personalizado</li>
+                <li><span>✓</span> Vídeos demonstrativos</li>
+                <li><span>✓</span> Avaliação física inicial</li>
+                <li><span>✓</span> Suporte via WhatsApp</li>
+              </ul>
+              
+              <div class="plano-cta">
+                <a href="https://wa.me/554896433673?text=Olá%20Gabriel%2C%20quero%20o%20plano%20Individual%20Mensal!" 
+                    target="_blank" 
+                    class="btn-plano">
+                    QUERO ESSE PLANO
+                  </a>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Dupla Mensal -->
+            <div class="plano-card destaque">
+              <div class="plano-header">
+                <h3 style="color: white;">Em Dupla </h3>
+                <div class="plano-preco">R$ 330,00</div>
+                <span>no pix ou R$349,00 no crédito em até 2x</span>
+                <p class="economia">(R$ 165 por pessoa)</p>
+              </div>
+              
+              <ul class="plano-beneficios">
+                <li><span>✓</span> Todos os benefícios do Individual</li>
+                <li><span>✓</span> Para você e mais uma pessoa</li>
+                <li><span>✓</span> Economia de 15% por pessoa</li>
+                <li><span>✓</span> Motivação em dobro</li>
+              </ul>
+              
+              <div class="plano-cta">
+                <a href="https://wa.me/554896433673?text=Olá%20Gabriel%2C%20quero%20o%20plano%20Duplal%20Mensal!" 
+                   target="_blank" 
+                   class="btn-plano">
+                  QUERO ESSE PLANO
+                </a>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Plano Trimestral -->
+        <div class="tab-pane" id="trimestral">
+          <div class="planos-grid">
+            <!-- Individual Trimestral -->
+            <div class="plano-card">
+              <div class="plano-header">
+                <h3>Individual</h3>
+                <div class="plano-preco">R$480,00<span>/3 meses</span></div>
+                <span> no pix ou R$510,00 no crédito em até 3x</span>
+                <p class="economia">(Economia de 11%)</p>
+              </div>
+              
+              <ul class="plano-beneficios">
+                <li><span>✓</span> Todos os benefícios do mensal</li>
+                <li><span>✓</span> Coqueteleira de brinde</li>
+                <li><span>✓</span> Pagamento único</li>
+                <li><span>✓</span> R$ 160/mês</li>
+                <li><span>✓</span> Reavaliação postural</li>
+              </ul>
+              
+              <div class="plano-cta">
+                <a href="https://wa.me/554896433673?text=Olá%20Gabriel%2C%20quero%20o%20plano%20Individual%20Trimestral!"
+                   target="_blank" 
+                   class="btn-plano">
+                  QUERO ESSE PLANO
+                </a>
+              </div>
+            </div>
+            
+            <!-- Dupla Trimestral -->
+            <div class="plano-card destaque">
+              <div class="plano-header">
+                <h3 style="color: white;">Em Dupla </h3>
+                <div class="plano-preco">R$930,00 </div>
+                <span>no pix ou R$995,00 no crédito em até 3x</span>
+                <p class="economia">(R$ 155 por pessoa/mês)</p>
+              </div>
+              
+              <ul class="plano-beneficios">
+                <li><span>✓</span> Todos os benefícios do Individual</li>
+                <li><span>✓</span> Coqueteleira para cada</li>
+                <li><span>✓</span> Economia de 17% por pessoa</li>
+              </ul>
+              
+              <div class="plano-cta">
+                <a href="https://wa.me/554896433673?text=Olá%20Gabriel%2C%20quero%20o%20plano%20Dupla%20Trimestral!"
+                   target="_blank" 
+                   class="btn-plano">
+                  QUERO ESSE PLANO
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Plano Semestral -->
+        <div class="tab-pane" id="semestral">
+          <div class="planos-grid">
+            <!-- Individual Semestral -->
+            <div class="plano-card">
+              <div class="plano-header">
+                <h3>Individual</h3>
+                <div class="plano-preco">R$900,00<span>/6 meses</span></div>
+                <span> no pix ou R$986,00 no crédito em até 6x</span>
+                <p class="economia">(Economia de 17%)</p>
+              </div>
+              
+              <ul class="plano-beneficios">
+                <li><span>✓</span> Todos os benefícios do trimestral</li>
+                <li><span>✓</span>  Reavaliação postural</li>
+                <li><span>✓</span>  Coqueteleira</li>
+                <li><span>✓</span> R$ 150/mês</li>
+              </ul>
+              
+              <div class="plano-cta">
+                <a href="https://wa.me/554896433673?text=Olá%20Gabriel%2C%20quero%20o%20plano%20Individual%20Semestral!"
+                   target="_blank" 
+                   class="btn-plano">
+                  QUERO ESSE PLANO
+                </a>
+              </div>
+            </div>
+            
+            <!-- Dupla Semestral -->
+            <div class="plano-card destaque">
+              <div class="plano-header">
+                <h3 style="color: white;">Em Dupla </h3>
+                <div class="plano-preco">R$ 1.740,00</div>
+                <span>no pix ou R$1.907,00 no crédito em até 6x</span>
+                <p class="economia">(R$ 145,00 por pessoa/mês)</p>
+              </div>
+              
+              <ul class="plano-beneficios">
+                <li><span>✓</span> Todos os benefícios do Individual</li>
+                <li><span>✓</span>  Coqueteleira para cada</li>
+                <li><span>✓</span> Economia de 22% por pessoa</li>
+              </ul>
+              
+              <div class="plano-cta">
+                <a href="https://wa.me/554896433673?text=Olá%20Gabriel%2C%20quero%20o%20plano%20Dupla%20Semestral!" 
+                   target="_blank" 
+                   class="btn-plano">
+                  QUERO ESSE PLANO
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Plano Anual -->
+        <div class="tab-pane active" id="anual">
+          <div class="planos-grid">
+            <!-- Individual Anual -->
+            <div class="plano-card">
+              <div class="plano-header">
+                <h3>Individual</h3>
+                <div class="plano-preco">R$ 1.200,00<span>/12 meses</span> </div>
+                <span>no pix ou R$1.390,00 no crédito em até 12x.</span>
+                <p class="economia">(Economia de 22%)</p>
+              </div>
+              
+              <ul class="plano-beneficios">
+                <li><span>✓</span> Todos os benefícios do semestral</li>
+                <li><span>✓</span> Brindes premium (camiseta + coqueteleira)</li>
+                <li><span>✓</span> R$ 100/mês</li>
+                <li><span>✓</span> Melhor custo-benefício</li>
+              </ul>
+              
+              <div class="plano-cta">
+                <a href="https://wa.me/554896433673?text=Olá%20Gabriel%2C%20quero%20o%20plano%20Individual%20Anual!" 
+                   target="_blank" 
+                   class="btn-plano">
+                  QUERO ESSE PLANO
+                </a>
+              </div>
+            </div>
+            
+            <!-- Dupla Anual -->
+            <div class="plano-card destaque">
+              <div class="plano-header">
+                <h3 style="color: white;">Em Dupla </h3>
+                <div class="plano-preco">R$ 2.160,00</div>
+                <span> no pix ou R$2.500,00 no crédito em até 12x.</span>
+                <p class="economia">(R$ 90,00 por pessoa/mês)</p>
+              </div>
+              
+              <ul class="plano-beneficios">
+                <li><span>✓</span> Todos os benefícios do Individual</li>
+                <li><span>✓</span> Brindes premium para cada (camiseta + coqueteleira)</li>
+                <li><span>✓</span> Economia de 27% por pessoa</li>
+              </ul>
+              
+              <div class="plano-cta">
+                <a href="https://wa.me/554896433673?text=Olá%20Gabriel%2C%20quero%20o%20plano%20Dupla%20Anual!" 
+                   target="_blank" 
+                   class="btn-plano">
+                  QUERO ESSE PLANO
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p class="pagamento-info"><strong>Formas de pagamento:</strong>  Pix, boleto, transferência ou cartão (até 12x)</p>
+  
+    <div class="cta-duvidas">
+      <a href="https://wa.me/554896433673?text=Tenho%20dúvidas%20sobre%20os%20planos" 
+         target="_blank" 
+         class="btn-duvidas">
+        TENHO DÚVIDAS, FALE COMIGO
+      </a>
+    </div>
+  </div>
+</section>
+  <footer>
+    <div class="container">
+      <img src="logo.png" alt="Gabriel Ruchert">
+      <h3>Gabriel Ruchert</h3>
+      <p>Personal Trainer | Especialista em Transformação Corporal</p>
+      <div class="social-links">
+        <a href="https://wa.me/554896433673?text=Tenho%20dúvidas%20sobre%20os%20planos" 
+           target="_blank" 
+           aria-label="WhatsApp"
+           style="outline: none; border: none;">
+          <img src="whatsapp.png" alt="WhatsApp" style="width: 50px; height: auto; border: none;">
+        </a>
+        <a href="https://www.instagram.com/gabrielruchertpersonal/" 
+           target="_blank" 
+           aria-label="Instagram"
+           style="outline: none; border: none;">
+          <img src="instagram.png" alt="Instagram" style="width: 50px; height: auto; border: none;">
+        </a>
+      </div>
+      <p class="copyright">&copy; 2025 Gabriel Ruchert Personal. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.getElementById('results-carousel');
+      const cards = document.querySelectorAll('.result-card');
+      const dotsContainer = document.getElementById('carousel-dots');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      
+      let currentIndex = 0;
+      const cardCount = cards.length;
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      // Criar dots
+      cards.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if(index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+      
+      const dots = document.querySelectorAll('.dot');
+      
+      function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+      
+      function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+      }
+      
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % cardCount;
+        updateCarousel();
+      }
+      
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + cardCount) % cardCount;
+        updateCarousel();
+      }
+      
+      // Event listeners
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+      
+      // Touch events para mobile
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, {passive: true});
+      
+      carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, {passive: true});
+      
+      function handleSwipe() {
+        const diff = touchStartX - touchEndX;
+        if (diff > 50) nextSlide(); // Swipe para esquerda
+        if (diff < -50) prevSlide(); // Swipe para direita
+      }
+      
+      // Opcional: Auto-play (removido para mobile por padrão)
+      if (window.innerWidth > 768) {
+        let interval = setInterval(nextSlide, 5000);
+        carousel.addEventListener('mouseenter', () => clearInterval(interval));
+        carousel.addEventListener('mouseleave', () => interval = setInterval(nextSlide, 5000));
+      }
+    });
+    </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Configuração do carrossel de depoimentos
+    const track = document.getElementById('depoimentos-track');
+    const cards = document.querySelectorAll('.depoimento-card');
+    const dotsContainer = document.getElementById('depoimentos-dots');
+    const prevBtn = document.querySelector('.prev-btn-depoimentos');
+    const nextBtn = document.querySelector('.next-btn-depoimentos');
+    
+    let currentIndex = 0;
+    const cardCount = cards.length;
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 20; // Espaço entre os cards
+    
+    // Criar dots de navegação
+    for (let i = 0; i < cardCount; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+    
+    // Atualizar carrossel
+    function updateCarousel() {
+      const offset = -currentIndex * (cardWidth + gap);
+      track.style.transform = `translateX(${offset}px)`;
+      
+      // Atualizar dots ativos
+      document.querySelectorAll('#depoimentos-dots .dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+    
+    // Ir para slide específico
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+    
+    // Slide anterior - com loop infinito
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? cardCount - 1 : currentIndex - 1;
+      updateCarousel();
+    });
+    
+    // Próximo slide - com loop infinito
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === cardCount - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
+    });
+    
+    // Navegação por teclado
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevBtn.click();
+      } else if (e.key === 'ArrowRight') {
+        nextBtn.click();
+      }
+    });
+    
+    // Auto-play (opcional) com loop infinito
+    let autoPlay = setInterval(() => {
+      nextBtn.click();
+    }, 5000);
+    
+    // Pausar auto-play quando o mouse estiver sobre o carrossel
+    const carouselContainer = document.querySelector('.depoimentos-carrossel');
+    carouselContainer.addEventListener('mouseenter', () => {
+      clearInterval(autoPlay);
+    });
+    
+    carouselContainer.addEventListener('mouseleave', () => {
+      autoPlay = setInterval(() => {
+        nextBtn.click();
+      }, 5000);
+    });
+    
+    // Redimensionamento da janela
+    window.addEventListener('resize', () => {
+      updateCarousel();
+    });
+  });
+</script>
+  <script>
+    // Função de rolagem suave aprimorada
+    document.addEventListener('DOMContentLoaded', function() {
+      function smoothScrollTo(target) {
+        const element = document.querySelector(target);
+        if (element) {
+          const offset = 100; // Ajuste de espaçamento
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+
+          // Destaque visual
+          element.classList.add('highlight-scroll');
+          setTimeout(() => {
+            element.classList.remove('highlight-scroll');
+          }, 1000);
+        }
+      }
+
+      // Configura o botão COMEÇE AGORA
+      document.getElementById('btn-comece-agora').addEventListener('click', function(e) {
+        e.preventDefault();
+        smoothScrollTo('#planos');
+      });
+
+      // Configura todos os links âncora
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          if(this.getAttribute('href') !== '#') {
+            e.preventDefault();
+            smoothScrollTo(this.getAttribute('href'));
+          }
+        });
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove classe active de todos os botões
+          tabBtns.forEach(b => b.classList.remove('active'));
+          
+          // Adiciona classe active apenas no botão clicado
+          this.classList.add('active');
+          
+          // Esconde todos os painéis
+          document.querySelectorAll('.tab-pane').forEach(pane => {
+            pane.classList.remove('active');
+          });
+          
+          // Mostra apenas o painel correspondente
+          const tabId = this.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+    });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Remove a classe 'active' de todas as abas e painéis
+        document.querySelectorAll('.tab-btn, .tab-pane').forEach(function(element) {
+          element.classList.remove('active');
+        });
+        
+        // Adiciona a classe 'active' apenas para a aba Anual
+        document.querySelector('.tab-btn[data-tab="anual"]').classList.add('active');
+        document.querySelector('#anual').classList.add('active');
+      });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const track = document.querySelector('.carrossel-track');
+          const slides = Array.from(document.querySelectorAll('.depoimento-card'));
+          const nextBtn = document.querySelector('.carrossel-next');
+          const prevBtn = document.querySelector('.carrossel-prev');
+          const dotsContainer = document.querySelector('.carrossel-dots');
+          
+          let currentIndex = 0;
+          const slideCount = slides.length;
+          
+          // Criar indicadores de slide
+          slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carrossel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+              goToSlide(index);
+            });
+            dotsContainer.appendChild(dot);
+          });
+          
+          const dots = document.querySelectorAll('.carrossel-dot');
+          
+          // Atualizar a posição do carrossel
+          function updateCarrossel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Atualizar dots ativos
+            dots.forEach((dot, index) => {
+              dot.classList.toggle('active', index === currentIndex);
+            });
+          }
+          
+          // Ir para slide específico
+          function goToSlide(index) {
+            currentIndex = index;
+            updateCarrossel();
+          }
+          
+          // Próximo slide
+          nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slideCount;
+            updateCarrossel();
+          });
+          
+          // Slide anterior
+          prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+            updateCarrossel();
+          });
+        });
+      </script>
+</body>
+</html>
+</body>
+</html>
