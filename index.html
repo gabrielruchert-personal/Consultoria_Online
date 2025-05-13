@@ -361,7 +361,7 @@
   position: relative;
 }
 
-.plano-card.destaque::before {
+.plano-card.destaque::before {  
   content: "MAIS POPULAR";
   position: absolute;
   top: -10px;
@@ -373,6 +373,32 @@
   font-size: 0.8rem;
   font-weight: bold;
 }
+
+.melhor-beneficio {
+  margin-top: 10px;
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  animation: destaquePulse 1.5s infinite alternate;
+}
+
+/* Animação opcional para dar mais destaque */
+@keyframes destaquePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 102, 0, 0.7);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.7);
+  }
+}
+
 
 .plano-header {
   text-align: center;
@@ -1815,8 +1841,8 @@ footer p {
               <p class="economia">Desconto de 5,26% no Pix.</p>
             </div>
             
-            <ul class="plano-beneficios">
-              <li><span>✓</span> Acesso a plataforma de videos por 30 dias</li>
+            <ul class="plano-beneficios"><!-- Individual mensal----------------------------------------------------------------------- -->
+              <li><span>✓</span> Acesso à plataforma de vídeos por 30 dias</li>
               <li><span>✓</span> Consultoria mensal</li>
               <li><span>✓</span> Avaliação física inicial</li>
               <li><span>✓</span> Suporte via WhatsApp</li>
@@ -1849,10 +1875,10 @@ footer p {
             </div>
             
             <ul class="plano-beneficios">
-              <li><span>✓</span> Acesso a plataforma de videos por 30 dias</li>
+              <li><span>✓</span> Acesso à plataforma de vídeos por 30 dias</li>
               <li><span>✓</span> Avaliação física inicial</li>
               <li><span>✓</span> Suporte via WhatsApp</li>
-              <li><span>✓</span> Garante 1 protocolo de treino com duração de 3 meses</li>
+              <li><span>✓</span> Garante 1 protocolo de treino com duração de 30 dias</li>
               <li><span>✓</span> Economia de 6% por pessoa</li>
             </ul>
             
@@ -1880,11 +1906,11 @@ footer p {
             </div>
             
             <ul class="plano-beneficios">
-              <li><span>✓</span> Acesso a plataforma de videos por 90 dias</li>   
+              <li><span>✓</span> Acesso à plataforma de vídeos por 90 dias</li>
               <li><span>✓</span> Suporte via WhatsApp</li>
               <li><span>✓</span> Garante 2 a 3 planos de treino com duração total de 3 meses</li>
-              <li><span>✓</span> Coqueteleira de brinde</li>
               <li><span>✓</span> Reavaliação postural</li>
+              <li><span>✓</span> Coqueteleira de brinde</li>
               <!-- Link mobile apenas -->
               <div class="mobile-only" style="text-align: center; font-size: 0.8em; display: none;">
                 <p>
@@ -1913,7 +1939,7 @@ footer p {
             </div>
             
             <ul class="plano-beneficios">
-              <li><span>✓</span> Acesso a plataforma de videos por 90 dias</li>
+              <li><span>✓</span> Acesso à plataforma de vídeos por 90 dias</li>
               <li><span>✓</span> Suporte via WhatsApp</li>
               <li><span>✓</span> Garante 2 a 3 planos de treino com duração total de 3 meses</li>
               <li><span>✓</span> Reavaliação postural</li>
@@ -1945,11 +1971,11 @@ footer p {
             </div>
             
             <ul class="plano-beneficios">
-              <li><span>✓</span> Acesso a plataforma de videos por 180 dias</li>
-              <li><span>✓</span> Suporte via WhatsApp</li>
-              <li><span>✓</span> Garante 4 a 6 planos de treino com duração total de 6 meses</li>
-              <li><span>✓</span> Reavaliação postural</li>
-              <li><span>✓</span> Coqueteleira de brinde</li>
+                <li><span>✓</span> Acesso à plataforma de vídeos por 180 dias</li>
+                <li><span>✓</span> Suporte via WhatsApp</li>
+                <li><span>✓</span> Garante 4 a 6 planos de treino com duração total de 6 meses</li>
+                <li><span>✓</span> Reavaliação postural</li>
+                <li><span>✓</span> Coqueteleira de brinde</li>
               <!-- Link mobile apenas -->
               <div class="mobile-only" style="text-align: center; font-size: 0.8em; display: none;">
                 <p>
@@ -1978,7 +2004,7 @@ footer p {
             </div>
             
             <ul class="plano-beneficios">      
-              <li><span>✓</span> Acesso a plataforma de videos por 180 dias</li>        
+              <li><span>✓</span> Acesso à plataforma de vídeos por 180 dias</li>
               <li><span>✓</span> Suporte via WhatsApp</li>
               <li><span>✓</span> Garante 4 a 6 planos de treino com duração total de 6 meses</li>
               <li><span>✓</span> Reavaliação postural</li>
@@ -2011,11 +2037,11 @@ footer p {
             </div>
             
             <ul class="plano-beneficios">
-              <li><span>✓</span> Acesso a plataforma de videos por 360 dias</li>
+              <li><span>✓</span> Acesso à plataforma de vídeos por 360 dias</li>
               <li><span>✓</span> Suporte via WhatsApp</li>
-              <li><span>✓</span> Voce tera 12 planos de treino com duração de 4 semanas cada ou 8 planos de treino com duração de de 6 semanas cada</li>
+              <li><span>✓</span> Você terá 12 planos de treino com duração de 4 semanas cada ou 8 planos de 6 semanas</li>
+               <li><span>✓</span> Reavaliação postural</li>
               <li><span>✓</span> Brindes premium (camiseta + coqueteleira)</li>
-              <li><span>✓</span> Melhor custo-benefício</li>
               <!-- Link mobile apenas -->
               <div class="mobile-only" style="text-align: center; font-size: 0.8em; display: none;">
                 <p>
@@ -2041,12 +2067,14 @@ footer p {
               <div class="plano-preco">R$2.160</div>
               <span>no pix ou R$2.500 no crédito em até 12x.</span>
               <p class="economia">(R$ 1.082 por pessoa)</p>
+              <div class="melhor-beneficio">MELHOR CUSTO-BENEFÍCIO</div>
             </div>
             
             <ul class="plano-beneficios">
-              <li><span>✓</span> Acesso a plataforma de videos por 360 dias</li>
+              <li><span>✓</span> Acesso à plataforma de vídeos por 360 dias</li>
               <li><span>✓</span> Suporte via WhatsApp</li>
-              <li><span>✓</span> Voce tera 12 planos de treino com duração de 4 semanas cada ou 8 planos de treino com duração de de 6 semanas cada</li>
+              <li><span>✓</span> Você terá 12 planos de treino com duração de 4 semanas cada ou 8 planos de 6 semanas</li>
+              <li><span>✓</span> Reavaliação postural</li>
               <li><span>✓</span> Brindes premium para cada (camiseta + coqueteleira)</li>
               <li><span>✓</span> Economia de 16% por pessoa</li>
             </ul>
